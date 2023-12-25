@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Analytics for E-commerce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predictive Analytics for E-commerce</h1>
+        <form id="predictionForm" method="post" action="{{ url_for('predict') }}">
+            <label for="customerID">Enter Customer ID:</label>
+            <input type="text" id="customerID" name="customerID" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result" class="{{ 'hidden' if not result else '' }}">
+            {% if result %}
+                <h2>Recommended Products for Customer ID: {{ result['customer_id'] }}</h2>
+                <ul id="productList">
+                    {% for i in range(result['product_name']|length) %}
+                        <li>
+                            <div class="product-item">
+                                <img src="{{ result['img_link'][i] }}" alt="{{ result['product_name'][i] }}">
+                                <div class="product-info">
+                                    <h3>{{ result['product_name'][i] }}</h3>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
