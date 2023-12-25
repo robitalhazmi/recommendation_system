@@ -100,7 +100,7 @@ The dataset includes the following information:
 
 ## Customization
 
-- To customize the predictive model, modify the `neural_collaborative_filtering` function in `model_module.py`.
+- To customize the predictive model, modify the `neural_collaborative_filtering` function in `app.py`.
 - Update the HTML and CSS files in the `templates` and `static` directories for UI customization.
 
 ## Contributing
