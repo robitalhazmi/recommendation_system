@@ -2,7 +2,7 @@
 
 ## Overview
 
-This web application uses predictive analytics to recommend products for a given customer based on historical data. It is designed for an e-commerce company to enhance its marketing strategy.
+This web application uses predictive analytics to recommend products for a given customer based on historical data. It is designed for an e-commerce company to enhance its marketing strategy. The demo can be accessed in https://robit.pythonanywhere.com.
 
 ## Features
 
